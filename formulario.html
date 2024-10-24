@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Moderno</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #aa8e85;
+            font-family: Arial, sans-serif;
+        }
+        h3 {
+            color: #633b16;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            color: #633b16; 
+            background-color: white;
+            border-color: #633b16;
+        }
+
+        .btn-primary{
+            color: white;
+            background-color: #aa8e85;
+            border-color: #aa8e85;
+        }
+        fieldset {
+            border: none;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        legend {
+            padding: 0 10px;
+            font-size: 1.2em;
+            color: #aa8e85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form id="myForm">
+        <fieldset>
+            <h3>Formulário para contato</h3>
+
+            <div class="form-group">
+                <label for="firstName">Nome</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Sobrenome</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="text" class="form-control" id="phone" required placeholder="(xx) xxxxx-xxxx">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Língua aplicada no serviço</label>
+                <select class="form-control" id="language" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="english">Inglês</option>
+                    <option value="spanish">Espanhol</option>
+                    <option value="french">Português (br)</option>
+                    <option value="portuguese">Português (pt)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fileUpload">Upload de Arquivo</label>
+                <input type="file" class="form-control" id="fileUpload" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png" required>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Linguagens Preferidas</label>
+                <select multiple class="form-control" id="preferredLanguages">
+                    <option value="" disabled selected>Selecione uma ou mais opções</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="csharp">C#</option>
+                </select>
+
+            <div class="form-group">
+                <label>Banco de Dados Recomendado</label><br>
+                <div>
+                    <input type="radio" id="sql" name="database" value="sql" required>
+                    <label for="sql">SQL</label>
+                </div>
+                <div>
+                    <input type="radio" id="nosql" name="database" value="nosql" required>
+                    <label for="nosql">NoSQL</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="meetingShift">Turno de Preferência para Reuniões</label>
+                <select class="form-control" id="meetingShift" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="morning">Manhã</option>
+                    <option value="afternoon">Tarde</option>
+                    <option value="evening">Noite</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferredTime">Melhor Horário Sugerido para Reuniões</label>
+                <input type="time" class="form-control" id="preferredTime" required>
+            </div>
+
+            <div class="form-group">
+                <label for="deliveryDate">Previsão de Entrega Desejada</label>
+                <input type="date" class="form-control" id="deliveryDate" required>
+            </div>
+
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        const form = event.target;
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            alert('Por favor, preencha todos os campos obrigatórios corretamente.');
+        } else {
+            //alert de confirmação
+            if (confirm('Você tem certeza que deseja prosseguir?')) {
+                alert('Dados enviados com sucesso!');
+            } else {
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

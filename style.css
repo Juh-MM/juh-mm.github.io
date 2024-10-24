@@ -1,0 +1,97 @@
+a {
+    color: #633b16; 
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #e7cfaa;
+}
+
+.icons {
+    text-align: center;
+    display: flexbox;
+}
+
+.topBcgSobre {
+    background-color: #aa8e85;
+    width: 26%;
+}
+
+.topBcgProjetos {
+    background-color: #633b16;
+    width: 26%;
+}
+
+.topBcgContato {
+    background-color: #aa8e85;
+    width: 26%;
+}
+
+.bcgColor {
+    background-color: #aa8e85;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.margin {
+    padding: 20px;
+}
+
+.container-dffs {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.btn {
+    color: #633b16;
+    border-color: #633b16;
+}
+
+.carousel-control-next-icon {
+    background-color: #8b804c;
+}
+
+.carousel-control-prev-icon {
+    background-color: #8b804c;
+}
+
+#foto {
+    width: 100%;
+}
+
+#bcgFooter {
+    background-color: #16423C;
+    color: #E9EFEC;
+}
+
+#menu {
+    color: #E9EFEC;
+    background-color: #aa8e85;
+}
+
+#home {
+    padding-top: 100px;
+    scroll-margin-top: 40px;
+}
+
+#sobre {
+    scroll-margin-top: 40px;
+}
+
+#Projetos {
+    scroll-margin-top: 40px;
+}
+
+#carouselExampleCaptions {
+    text-align: center;
+}
+
+#carouselExample {
+    max-width: 800px;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
